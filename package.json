@@ -11,6 +11,9 @@
     "node": "12"
   },
   "scripts": {
+    "migrate": "npx knex migrate:latest --knexfile ./db/knexfile.js",
+    "seed": "npx knex seed:run --knexfile ./db/knexfile.js",
+    "down": "npx knex migrate:down --knexfile ./db/knexfile.js",
     "dev": "cross-env NODE_ENV=development nodemon --watch src --exec babel-node src/app.js"
   },
   "devDependencies": {
