@@ -1,5 +1,5 @@
 const UtilUser = require('../utils/user');
-const Token = require('../../utils/token');
+const Token = require('../../../utils/token');
 const UserModel = require('../models/signModel');
 
 const formatUser = (user) => {
@@ -10,7 +10,7 @@ const formatUser = (user) => {
 const login = async (user) => {
   await UtilUser.validate(user);
 
-  const [dbUser] = await UserModel.GetUserByEmail(user.email);
+  const [dbUser] = await UserModel.getUserByEmail(user.email);
 
   if (!dbUser) throw { error: 'notFoundEmail', handleError: true };
 
@@ -29,7 +29,7 @@ const signUp = async (user) => {
 
   formatUser(user);
   
-  const insertedUser = await UserModel.InsertUser(user);
+  const insertedUser = await UserModel.insertUser(user);
 
   UtilUser.removePassword(insertedUser);
 

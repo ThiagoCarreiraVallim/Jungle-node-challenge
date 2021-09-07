@@ -1,14 +1,14 @@
 const User = require('../../../../db/models/user');
 
-const InsertUser = (user) => User.query().insert(user);
+const insertUser = (user) => User.query().insert(user);
 
-const GetUserById = (id) => User.query().findById(id);
+const getUserById = (id) => User.query().findById(id);
 
-const GetUserByEmail = (email) => User.query().where('email', email);
+const getUserByEmail = (email) => User.query().where('email', email);
 
 
 module.exports = {
-  GetUserByEmail,
-  GetUserById,
-  InsertUser,
+  getUserByEmail,
+  getUserById,
+  insertUser,
 };

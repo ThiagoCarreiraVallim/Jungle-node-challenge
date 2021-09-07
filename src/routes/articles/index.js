@@ -3,7 +3,6 @@ const rescue = require('express-rescue');
 
 const authAdmin = require('../../middleware/authAdmin');
 const authMiddleware = require('../../middleware/authMiddleware');
-const upload = require('../../utils/multerHandler');
 
 const authorController = require('./controller/authorController');
 
