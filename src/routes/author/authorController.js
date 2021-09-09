@@ -1,9 +1,9 @@
-const authorServices = require('../services/authorServices');
+const authorServices = require('./authorServices');
 
 const create = async (req, res) => {
   const { filename } = req.file;
   const { name } = req.body;
-  
+
   const response = await authorServices.create({ name, filename });
 
   res.status(response.status).json(response.data);
@@ -27,7 +27,6 @@ const updateById = async (req, res) => {
   const { id } = req.params;
   const file = req.file || {};
   const { name } = req.body;
-
   
   const response = await authorServices.updateById(id, { name, filename: file.filename });
 
@@ -48,4 +47,4 @@ module.exports = {
   getById,
   getAll,
   create,
-}
+};

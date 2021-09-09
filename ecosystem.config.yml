@@ -1,0 +1,9 @@
+apps: 
+
+- name: app
+  script: ./src/index.js
+  env_prod:
+    NODE_ENV: production
+  env_dev:
+    NODE_ENV: development
+  exp_backoff_restart_delay: 100

@@ -4,6 +4,7 @@ const error = {
   invalidToken: { code: 400, message: 'Invalid token' },
   forbidden: { code: 403, message: 'Forbidden' },
   authorNotFound: { code: 404, message: 'Author not found' },
-}
+  articleNotFound: { code: 404, message: 'Article not found' },
+};
 
 module.exports = error;

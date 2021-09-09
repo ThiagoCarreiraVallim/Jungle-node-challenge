@@ -1,11 +1,11 @@
-const UtilUser = require('../utils/user');
-const Token = require('../../../utils/token');
-const UserModel = require('../models/signModel');
+const UtilUser = require('./utils/user');
+const Token = require('../../utils/token');
+const UserModel = require('./signModel');
 
 const formatUser = (user) => {
   user.password = UtilUser.crypto(user.password);
   user.role = user.role || 'user';
-}
+};
 
 const login = async (user) => {
   await UtilUser.validate(user);
@@ -16,13 +16,11 @@ const login = async (user) => {
 
   if (UtilUser.crypto(user.password) !== dbUser.password) {
     throw { error: 'invalidPassword', handleError: true };
-
   } else {
     UtilUser.removePassword(dbUser);
     return { status: 200, token: Token.generate(dbUser) };
-
   }
-}
+};
 
 const signUp = async (user) => {
   await UtilUser.validate(user);
@@ -39,4 +37,4 @@ const signUp = async (user) => {
 module.exports = {
   signUp,
   login,
-}
+};

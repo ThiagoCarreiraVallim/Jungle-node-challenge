@@ -1,12 +1,12 @@
-const signServices = require('../services/signServices');
+const signServices = require('./signServices');
 
 const login = async (req, res) => {
   const { email, password } = req.body;
 
   const response = await signServices.login({ email, password });
 
-  res.status(response.status).json({ token: response.token })
-}
+  res.status(response.status).json({ token: response.token });
+};
 
 const singUp = async (req, res) => {
   const { name, email, password, role } = req.body;
@@ -18,5 +18,5 @@ const singUp = async (req, res) => {
 
 module.exports = {
   singUp,
-  login
+  login,
 };

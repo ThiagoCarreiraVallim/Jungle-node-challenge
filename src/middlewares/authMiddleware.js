@@ -1,4 +1,4 @@
-const UserModel = require('../routes/signInUp/models/signModel');
+const UserModel = require('../routes/signInUp/signModel');
 const { decrypted } = require('../utils/token');
 
 const validateToken = async (token) => {
@@ -9,14 +9,14 @@ const validateToken = async (token) => {
 
     return userData;
   } catch (error) {
-    throw { error: 'invalidToken', handleError: true  };
+    throw { error: 'invalidToken', handleError: true };
   }
 };
 
 const authMiddleware = async (req, res, next) => {
   const token = req.headers.authorization;
 
-  if(token) {
+  if (token) {
     const data = await validateToken(token);
     
     req.user = data;

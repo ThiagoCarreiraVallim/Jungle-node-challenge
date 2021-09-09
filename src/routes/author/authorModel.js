@@ -1,4 +1,4 @@
-const Author = require('../../../../db/models/author');
+const Author = require('../../../db/models/author');
 
 const getAuthors = () => Author.query();
 

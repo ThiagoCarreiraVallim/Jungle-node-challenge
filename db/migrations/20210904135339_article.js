@@ -1,6 +1,4 @@
-
-exports.up = (knex) => {
-  return knex.schema.createTable('articles', (table) => {
+exports.up = (knex) => knex.schema.createTable('articles', (table) => {
     table.increments('id');
     table.integer('authorId').references('id').inTable('authors').notNullable();
     table.string('category', 100).notNullable();
@@ -10,9 +8,6 @@ exports.up = (knex) => {
     table.text('body').notNullable();
 
     table.timestamps(true, true);
-  });  
-};
+  });
 
-exports.down = (knex) => {
-  return knex.schema.dropTableIfExists('articles');
-};
+exports.down = (knex) => knex.schema.dropTableIfExists('articles');
