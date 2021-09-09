@@ -15,4 +15,4 @@ const decrypted = (token) => jwt.verify(token, secret);
 module.exports = {
   decrypted,
   generate,
-}
+};

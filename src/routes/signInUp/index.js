@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const rescue = require('express-rescue');
 
-const signController = require('./controller/signController');
+const signController = require('./signController');
 
 router.post('/login', rescue(signController.login));
 

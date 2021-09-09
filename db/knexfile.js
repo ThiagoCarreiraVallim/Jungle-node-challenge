@@ -1,5 +1,9 @@
 const { knexSnakeCaseMappers } = require('objection');
 
+const DB_NAME = process.env.DB_NAME;
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASSWORD;
+
 module.exports = {
 
   development: {
@@ -7,25 +11,25 @@ module.exports = {
     client: 'postgresql',
 
     connection: {
-      database: 'challenge',
-      user:     'postgres',
-      password: 'postgres'
+      database: DB_NAME,
+      user: DB_USER,
+      password: DB_PASSWORD,
     },
 
     pool: {
       min: 2,
-      max: 10
+      max: 10,
     },
 
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: 'knex_migrations',
     },
 
     seeds: {
       directory: './seeders',
     },
 
-    ...knexSnakeCaseMappers
+    ...knexSnakeCaseMappers,
   },
 
   production: {
@@ -33,25 +37,25 @@ module.exports = {
     client: 'postgresql',
 
     connection: {
-      database: 'challenge',
-      user:     'postgres',
-      password: 'postgres'
+      database: DB_NAME,
+      user: DB_USER,
+      password: DB_PASSWORD,
     },
 
     pool: {
       min: 2,
-      max: 10
+      max: 10,
     },
 
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: 'knex_migrations',
     },
 
     seeds: {
       directory: './seeders',
     },
 
-    ...knexSnakeCaseMappers
-  }
+    ...knexSnakeCaseMappers,
+  },
 
 };

@@ -1,4 +1,5 @@
 const { Model } = require('objection');
+const Article = require('./article');
 
 class Author extends Model {
   static get tableName() {
@@ -6,9 +7,6 @@ class Author extends Model {
   }
 
   static get relationMappings() {
-
-    const Article = require('./article');
-
     return {
       articles: {
         relation: Model.HasManyRelation,
@@ -20,7 +18,6 @@ class Author extends Model {
       },
     };
   }
-
 }
 
 module.exports = Author;
