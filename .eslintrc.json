@@ -9,5 +9,7 @@
         "ecmaVersion": 12
     },
     "rules": {
+        "no-throw-literal": 0,
+        "no-param-reassign": 0
     }
 }

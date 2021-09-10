@@ -1,5 +1,4 @@
 const { Model } = require('objection');
-const Article = require('./article');
 
 class Author extends Model {
   static get tableName() {
@@ -7,6 +6,8 @@ class Author extends Model {
   }
 
   static get relationMappings() {
+    // eslint-disable-next-line global-require
+    const Article = require('./article');
     return {
       articles: {
         relation: Model.HasManyRelation,

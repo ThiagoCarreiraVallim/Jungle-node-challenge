@@ -6,9 +6,9 @@ const Id = require('../../utils/id');
 const create = async (article) => {
   await articleUtil.validate(article);
   await author.getById(article.authorId);
-  
+
   const insertedArticle = await articlesModel.insertArticle(article);
-  
+
   return { status: 201, data: insertedArticle };
 };
 

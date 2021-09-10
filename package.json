@@ -16,7 +16,8 @@
     "down": "npx knex migrate:down --knexfile ./db/knexfile.js",
     "dev": "cross-env NODE_ENV=development nodemon --watch src --exec babel-node src/index.js",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json .",
-    "start": "pm2-runtime start ecosystem.config.yml --env prod"
+    "db:build": "yarn migrate && yarn seed",
+    "start": "yarn db:build && pm2-runtime start ecosystem.config.yml --env prod"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
