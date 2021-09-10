@@ -173,7 +173,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ```
   <br/>
 
-### **(ADMIN) List all Authors**
+### **ADMIN - List all Authors**
 ##### `GET` /api/admin/authors
   <br/>
 
@@ -209,7 +209,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ```
   <br/>
 
-### **(ADMIN) Get details of an Author**
+### **ADMIN - Get details of an Author**
 ##### `GET` /api/admin/authors/:id
   <br/>
 
@@ -237,7 +237,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ```
   <br/>
 
-### **(ADMIN) Update an Author**
+### **ADMIN - Update an Author**
 ##### `PUT` /api/admin/authors/:id
   <br/>
 
@@ -272,7 +272,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ```
   <br/>
 
-### **(ADMIN) Delete an Author**
+### **ADMIN - Delete an Author**
 ##### `DELETE` /api/admin/authors/:id
   <br/>
   
@@ -296,7 +296,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ```
   <br/>
 
-### **(ADMIN) Create an Article**
+### **ADMIN - Create an Article**
 ##### `POST` /api/admin/articles
   <br/>
 
@@ -339,7 +339,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ```
   <br/>
 
-### **(ADMIN) List all Articles**
+### **ADMIN - List all Articles**
 ##### `GET` /api/admin/articles
   <br/>
 
@@ -375,7 +375,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ```
   <br/>
 
-### **(ADMIN) Get details of an Article**
+### **ADMIN - Get details of an Article**
 ##### `GET` /api/admin/articles/:id
   <br/>
 
@@ -412,7 +412,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ``` 
   <br/>
 
-### **(ADMIN) Update an Article**
+### **ADMIN - Update an Article**
 ##### `PUT` /api/admin/articles/:id
   <br/>
 
@@ -460,7 +460,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ``` 
   <br/>
 
-### **(ADMIN) Delete an Article**
+### **ADMIN - Delete an Article**
 ##### `DELETE` /api/admin/articles/:id
   <br/>
 
