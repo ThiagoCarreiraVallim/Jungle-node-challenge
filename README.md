@@ -8,20 +8,20 @@
   - [Run in develop mode](#Instructions-to-run-in-develop-mode)
   - [Run in production mode](#Instructions-to-run-in-production-mode)
 - [Documentation](#Documentation)
-  - [Sign-up - POST](#Sign-up---POST)
-  - [Login - POST](#Login---POST)
-  - [(ADMIN) Authors - POST](#(ADMIN)-Authors---POST)
-  - [(ADMIN) Authors - GET all](#(ADMIN)-Authors---GET)
-  - [(ADMIN) Authors - GET](#(ADMIN)-Authors---GET)
-  - [(ADMIN) Authors - PUT](#(ADMIN)-Authors---PUT)
-  - [(ADMIN) Authors - DELETE](#(ADMIN)-Authors---DELETE)
-  - [(ADMIN) Articles - POST](#(ADMIN)-Articles---POST)
-  - [(ADMIN) Articles - GET all](#(ADMIN)-Articles---GET)
-  - [(ADMIN) Articles - GET](#(ADMIN)-Articles---GET)
-  - [(ADMIN) Articles - PUT](#(ADMIN)-Articles---PUT)
-  - [(ADMIN) Articles - DELETE](#(ADMIN)-Articles---DELETE)
-  - [Articles - GET](#Articles---GET)
-  - [Articles - GET](#Articles---GET)
+  - [Sign-up](#Sign-up)
+  - [Login](#Login)
+  - [ADMIN - Create Authors](#ADMIN---Create-Authors)
+  - [ADMIN - List all Authors](#ADMIN---List-all-Authors)
+  - [ADMIN - Get details of an Author](#ADMIN---Get-details-of-an-Author)
+  - [ADMIN - Update an Author](#ADMIN---Update-an-Author)
+  - [ADMIN - Delete an Author](#ADMIN---Delete-an-Author)
+  - [ADMIN - Create an Article](#ADMIN---Create-an-Article)
+  - [ADMIN - List all Articles](#ADMIN---List-all-Articles)
+  - [ADMIN - Get details of an Article](#ADMIN---Get-details-of-an-Article)
+  - [ADMIN - Update an Article](#ADMIN---Update-an-Article)
+  - [ADMIN - Delete an Article](#ADMIN---Delete-an-Article)
+  - [List Articles by category](#List-Articles-by-category)
+  - [Get details of an Article](#Get-details-of-an-Article)
 
 
 
@@ -99,7 +99,12 @@
 
 Obs. All the routes with admin tag needed to login with admin permissions
 
-### Sign-up - POST ``/api/sign-up``:
+<br/>
+
+### **Sign-up**
+##### `POST` /api/sign-up
+<br/>
+
   This endpoint register a new user and return a auth token.
   - Exemple `request body` 
     ``` json
@@ -117,8 +122,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGhpYWdvIENhcnJlaXJhIFZhbGxpbSIsImVtYWlsIjoidGhpYWdvY3ZhbGxpbUBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlkIjoyLCJpYXQiOjE2MzEyNjA4ODksImV4cCI6MTYzMTg2NTY4OX0.yZIXSANkKo-RDAt5MICEo17iqZPOHTqr6vHJ4FSbfKw"
       }
     ```
+  <br/>
 
-### Login - POST ``/api/login``:
+### **Login** 
+##### `POST` /api/login
+  <br/>
+
   This endpoint validate the login and return a token.
 
   - exemple `request body` 
@@ -135,8 +144,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGhpYWdvIENhcnJlaXJhIFZhbGxpbSIsImVtYWlsIjoidGhpYWdvY3ZhbGxpbUBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlkIjoyLCJpYXQiOjE2MzEyNjA4ODksImV4cCI6MTYzMTg2NTY4OX0.yZIXSANkKo-RDAt5MICEo17iqZPOHTqr6vHJ4FSbfKw"
       }
     ```
+  <br/>
+  
+### **ADMIN - Create Authors**
+##### `POST` /api/admin/authors
+  <br/>
 
-### (ADMIN) Authors - POST ``/api/admin/authors``:
   This endpoint register a new author in aplication database.
 
   - exemple `request`
@@ -158,8 +171,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         "id": 1
       }
     ```
+  <br/>
 
-### (ADMIN) Authors - GET ``/api/admin/authors``:
+### **ADMIN - List all Authors**
+##### `GET` /api/admin/authors
+  <br/>
+
   This endpoint get all the authors.
 
   - exemple `request`
@@ -190,9 +207,13 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       ]
     ```
+  <br/>
 
-### (ADMIN) Authors - GET ``/api/admin/authors/:id``:
-  This endpoint get a specific author by passing the id through the url.
+### **ADMIN - Get details of an Author**
+##### `GET` /api/admin/authors/:id
+  <br/>
+
+  This endpoint get a specific author by passing the id of the author through the url.
 
   - exemple `request`
     - `url`
@@ -214,8 +235,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         "picture": "/api/image/1631285650187.jpeg"
       }
     ```
+  <br/>
 
-### (ADMIN) Authors - PUT ``/api/admin/authors/:id``:
+### **ADMIN - Update an Author**
+##### `PUT` /api/admin/authors/:id
+  <br/>
+
   This endpoint update a specific author by passing the id through the url.
 
   - Exemple `request`
@@ -245,8 +270,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         "id": 2
       }
     ```
+  <br/>
 
-### (ADMIN) Authors - DELETE ``/api/admin/authors/:id``:
+### **ADMIN - Delete an Author**
+##### `DELETE` /api/admin/authors/:id
+  <br/>
+  
   This endpoint delete a specific author by passing the id through the url.
 
   - Exemple `request`
@@ -265,8 +294,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ```json
       No content
     ```
+  <br/>
 
-### (ADMIN) Articles - POST ``/api/admin/articles``:
+### **ADMIN - Create an Article**
+##### `POST` /api/admin/articles
+  <br/>
+
   This endpoint insert a new article in the aplication database.
 
   - Exemple `request`
@@ -304,8 +337,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       }
     ```
+  <br/>
 
-### (ADMIN) Articles - GET ``/api/admin/articles``:
+### **ADMIN - List all Articles**
+##### `GET` /api/admin/articles
+  <br/>
+
   This endpoint get all the articles in the aplication database.
 
   - Exemple `request`
@@ -336,8 +373,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         ...
       ]
     ```
+  <br/>
 
- ### (ADMIN) Articles - GET ``/api/admin/articles/:id``:
+### **ADMIN - Get details of an Article**
+##### `GET` /api/admin/articles/:id
+  <br/>
+
   This endpoint get a specific article by passing the id through the url.
 
   - Exemple `request`
@@ -369,9 +410,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       }
     ``` 
+  <br/>
 
+### **ADMIN - Update an Article**
+##### `PUT` /api/admin/articles/:id
+  <br/>
 
-### (ADMIN) Articles - PUT ``/api/admin/articles/:id``:
   This endpoint update a specific author by passing the id through the url.
 
   - Exemple `request`
@@ -414,8 +458,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       }
     ``` 
+  <br/>
 
- ### (ADMIN) Articles - DELETE ``/api/admin/articles/:id``:
+### **ADMIN - Delete an Article**
+##### `DELETE` /api/admin/articles/:id
+  <br/>
+
   This endpoint delete a specific article by passing the id through the url.
 
   - Exemple `request`
@@ -432,9 +480,13 @@ Obs. All the routes with admin tag needed to login with admin permissions
   - Exemple `response body`
     ```json
       No content
-    ``` 
+    ```
+  <br/> 
 
-### Articles - GET ``/api/articles?category=:slug``:
+### **List Articles by category**
+##### `GET` /api/articles?category=:slug
+  <br/>
+
   This endpoint list articles filtered by a category.
   - Exemple `request`
     - `url`
@@ -480,8 +532,12 @@ Obs. All the routes with admin tag needed to login with admin permissions
         ...
       ]
     ```
+  <br/>
 
-### Articles - GET ``/api/articles/:id``:
+### **Get details of an Article**
+##### `GET` /api/articles/:id
+  <br/>
+
    This endpoint get a specific article by passing the id through the url.
   - Exemple `request`
     - `url`
