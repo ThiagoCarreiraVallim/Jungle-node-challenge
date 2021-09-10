@@ -10,7 +10,7 @@
 - [Documentation](#Documentation)
   - [Sign-up](#Sign-up)
   - [Login](#Login)
-  - [(ADMIN) Create Authors](#(ADMIN)-Create-Authors)
+  - [ADMIN - Create Authors](#ADMIN---Create-Authors)
   - [(ADMIN) List all Authors](#(ADMIN)-List-all-Authors)
   - [(ADMIN) Get details of an Author](#(ADMIN)-Get-details-of-an-Author)
   - [(ADMIN) Update an Author](#(ADMIN)-Update-an-Author)
