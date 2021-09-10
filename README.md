@@ -146,7 +146,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     ```
   <br/>
   
-### **(ADMIN) Create Authors**
+### **ADMIN - Create Authors**
 ##### `POST` /api/admin/authors
   <br/>
 
