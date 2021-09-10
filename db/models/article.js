@@ -1,5 +1,5 @@
+/* eslint-disable no-param-reassign */
 const { Model } = require('objection');
-const Author = require('./author');
 
 class Article extends Model {
   static get tableName() {
@@ -7,6 +7,8 @@ class Article extends Model {
   }
 
   static get relationMappings() {
+    // eslint-disable-next-line global-require
+    const Author = require('./author');
     return {
       authors: {
         relation: Model.BelongsToOneRelation,
