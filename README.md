@@ -71,6 +71,7 @@
   ```sh
     yarn install
   ```
+- Config the `.env` file
 
 ## Instructions to run in develop mode
 
@@ -92,7 +93,7 @@
     sudo docker-compose up
 - Start the aplication in production mode using `pm2`
   ```sh
-    yarn dev
+    yarn start
   ``` 
 
 ## Documentation
