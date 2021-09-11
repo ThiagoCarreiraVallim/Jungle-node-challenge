@@ -71,6 +71,7 @@
   ```sh
     yarn install
   ```
+- Config the `.env` file
 
 ## Instructions to run in develop mode
 
