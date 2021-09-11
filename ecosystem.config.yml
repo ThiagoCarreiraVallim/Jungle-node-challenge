@@ -1,5 +1,4 @@
 apps: 
-
 - name: app
   script: ./src/index.js
   env_prod:
