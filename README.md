@@ -3,7 +3,7 @@
 ## Sumary
 
 - [Description](#Description)
-- [Prerequisites](#Prerequisites)
+- [Prerequisites](#Pre---requisites)
   - [Install](#Install)
   - [Run in develop mode](#Instructions-to-run-in-develop-mode)
   - [Run in production mode](#Instructions-to-run-in-production-mode)
@@ -37,7 +37,7 @@
 - Serialization;
 - Production builds.
 
-## Prerequisites
+## Pre-requisites
 
 - `yarn`
   ```sh
@@ -107,7 +107,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 <br/>
 
   This endpoint register a new user and return a auth token.
-  - Exemple `request body` 
+  - Example `request body` 
     ``` json
       {
         "name": "Thiago Carreira Vallim",
@@ -117,7 +117,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
       }
     ```
 
-  - Exemple `response body`
+  - Example `response body`
     ```json
       {
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGhpYWdvIENhcnJlaXJhIFZhbGxpbSIsImVtYWlsIjoidGhpYWdvY3ZhbGxpbUBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlkIjoyLCJpYXQiOjE2MzEyNjA4ODksImV4cCI6MTYzMTg2NTY4OX0.yZIXSANkKo-RDAt5MICEo17iqZPOHTqr6vHJ4FSbfKw"
@@ -131,7 +131,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint validate the login and return a token.
 
-  - exemple `request body` 
+  - Example `request body` 
     ``` json
       {
         "email": "thiagocvallim@gmail.com",
@@ -139,7 +139,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
       }
     ```
 
-  - exemple `response body`
+  - Example `response body`
     ```json
       {
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGhpYWdvIENhcnJlaXJhIFZhbGxpbSIsImVtYWlsIjoidGhpYWdvY3ZhbGxpbUBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlkIjoyLCJpYXQiOjE2MzEyNjA4ODksImV4cCI6MTYzMTg2NTY4OX0.yZIXSANkKo-RDAt5MICEo17iqZPOHTqr6vHJ4FSbfKw"
@@ -153,7 +153,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint register a new author in aplication database.
 
-  - exemple `request`
+  - Example `request`
     - `headers`
       ```json
         {
@@ -164,7 +164,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
     - `body`
       ![MultPart-FormData](./src/uploads/1631285702853.jpeg)
 
-  - exemple `response body`
+  - Example `response body`
     ```json
       {
         "name": "Thiago Vallim",
@@ -180,7 +180,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint get all the authors.
 
-  - exemple `request`
+  - Example `request`
     - `headers`
       ```json
         {
@@ -188,7 +188,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       ```
 
-  - exemple `response body`
+  - Example `response body`
     ```json
       [
         {
@@ -216,7 +216,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint get a specific author by passing the id of the author through the url.
 
-  - exemple `request`
+  - Example `request`
     - `url`
       ```
         /api/admin/authors/2
@@ -228,7 +228,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       ```
 
-  - exemple `response body`
+  - Example `response body`
     ```json
       {
         "id": 2,
@@ -244,7 +244,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint update a specific author by passing the id through the url.
 
-  - Exemple `request`
+  - Example `request`
     - `url`
       ```
         /api/admin/authors/2
@@ -263,7 +263,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       ```
 
-  - Exemple `response body`
+  - Example `response body`
     ```json
       {
         "name": "Thiago Carreira Vallim",
@@ -279,7 +279,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
   
   This endpoint delete a specific author by passing the id through the url.
 
-  - Exemple `request`
+  - Example `request`
     - `url`
       ```
         /api/admin/authors/2
@@ -291,7 +291,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       ```
 
-  - Exemple `response body`
+  - Example `response body`
     ```json
       No content
     ```
@@ -303,7 +303,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint insert a new article in the aplication database.
 
-  - Exemple `request`
+  - Example `request`
     - `headers`
       ```json
         {
@@ -322,7 +322,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       ```
 
-  - Exemple `response body`
+  - Example `response body`
     ```json
       {
         "category": "Category",
@@ -346,14 +346,14 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint get all the articles in the aplication database.
 
-  - Exemple `request`
+  - Example `request`
     - `headers`
       ```json
         {
           "Authorization": "(Sign or Login Token)"
         }
       ```
-  - Exemple `response body`
+  - Example `response body`
     ```json
       [
         {
@@ -382,7 +382,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint get a specific article by passing the id through the url.
 
-  - Exemple `request`
+  - Example `request`
     - `url`
       ```
         /api/admin/articles/1
@@ -393,7 +393,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
           "Authorization": "(Sign or Login Token)"
         }
       ```
-  - Exemple `response body`
+  - Example `response body`
     ```json
       {
         "id": 1,
@@ -419,7 +419,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint update a specific author by passing the id through the url.
 
-  - Exemple `request`
+  - Example `request`
     - `url`
       ```
         /api/admin/articles/1
@@ -441,7 +441,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
           "body": "<div><p>Second paragraph</p><p>Third paragraph</p></div>"
         }
       ```
-  - Exemple `response body`
+  - Example `response body`
     ```json
       {
         "category": "New Category",
@@ -467,7 +467,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
 
   This endpoint delete a specific article by passing the id through the url.
 
-  - Exemple `request`
+  - Example `request`
     - `url`
       ```
         /api/admin/articles/1
@@ -478,7 +478,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
           "Authorization": "(Sign or Login Token)"
         }
       ```
-  - Exemple `response body`
+  - Example `response body`
     ```json
       No content
     ```
@@ -489,7 +489,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
   <br/>
 
   This endpoint list articles filtered by a category.
-  - Exemple `request`
+  - Example `request`
     - `url`
       ```
         /api/articles?category=Category
@@ -500,7 +500,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
           "Authorization": "(optional)"
         }
       ```
-  - Exemple `response body` (logged user)
+  - Example `response body` (logged user)
     ```json
       [
         {
@@ -517,7 +517,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
         ...
       ]
     ```
-  - Exemple `response body` (anonymous)
+  - Example `response body` (anonymous)
     ```json
       [
         {
@@ -540,7 +540,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
   <br/>
 
    This endpoint get a specific article by passing the id through the url.
-  - Exemple `request`
+  - Example `request`
     - `url`
       ```
         /api/articles/1
@@ -551,7 +551,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
           "Authorization": "(optional)"
         }
       ```
-  - Exemple `response body` (logged user)
+  - Example `response body` (logged user)
     ```json
       {
         "category": "New Category",
@@ -565,7 +565,7 @@ Obs. All the routes with admin tag needed to login with admin permissions
         }
       }
     ```
-  - Exemple `response body` (anonymous)
+  - Example `response body` (anonymous)
     ```json
       {
         "category": "New Category",
